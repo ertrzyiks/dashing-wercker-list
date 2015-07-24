@@ -1,4 +1,4 @@
-$background: rgb(181, 205, 202);
+$background: #3DBDEE;
 
 $default-color: #333333;
 $passed-color: #8fb347;
@@ -14,23 +14,28 @@ $aborted-color: #FFBA06;
     width: 100% !important;
     position: absolute;
     left: 0;
-    top: 0;
+    top: 40px;
     opacity: 0.05;
   }
 
-  .icon-build {
-    display: none;
-    opacity: 0.3;
+  .build-icon-container {
     float: right;
-    font-size: 140%;
   }
 
-  .icon-build--running,
-  .icon-build--passed,
-  .icon-build--failed,
-  .icon-build--unknown,
-  .icon-build--aborted {
-    @extend .icon-build;
+  .build-icon {
+    display: none;
+    opacity: 0.3;
+    font-size: 20px;
+    vertical-align: middle;
+    height: 100%;
+  }
+
+  .build-icon--running,
+  .build-icon--passed,
+  .build-icon--failed,
+  .build-icon--unknown,
+  .build-icon--aborted {
+    @extend .build-icon;
   }
 
   .label.status {
@@ -65,7 +70,7 @@ $aborted-color: #FFBA06;
   li.result-passed {
     background-color: $passed-color;
 
-    .icon-build--passed {
+    .build-icon--passed {
       display: inline;
     }
   }
@@ -73,7 +78,7 @@ $aborted-color: #FFBA06;
   li.result-failed {
     background-color: $failed-color;
 
-    .icon-build--failed {
+    .build-icon--failed {
       display: inline;
     }
   }
@@ -81,7 +86,7 @@ $aborted-color: #FFBA06;
   li.result-aborted {
     background-color: $aborted-color;
 
-    .icon-build--aborted {
+    .build-icon--aborted {
       display: inline;
     }
   }
@@ -89,7 +94,7 @@ $aborted-color: #FFBA06;
   li.status-unknown {
     background-color: $unknown-color;
 
-    .icon-build--unknown {
+    .build-icon--unknown {
       display: inline;
     }
   }
@@ -101,7 +106,7 @@ $aborted-color: #FFBA06;
   li.status-running {
     background-color: $running-color;
 
-    .icon-build--running {
+    .build-icon--running {
       display: inline;
     }
   }

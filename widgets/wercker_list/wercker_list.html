@@ -9,10 +9,12 @@
         <span class="label status" data-bind="item.build.status"></span>
         <span class="label value" data-bind="item.value"></span>
 
-        <i class="icon icon-check-sign icon-build--passed"></i>
-        <i class="icon icon-ban-circle icon-build--failed"></i>
-        <i class="icon icon-question icon-build--unknown"></i>
-        <i class="icon icon-warning-sign icon-build--aborted"></i>
-        <i class="icon icon-refresh icon-spin icon-build--running"></i>
+        <div class="build-icon-container">
+            <i class="icon icon-check-sign build-icon--passed"></i>
+            <i class="icon icon-ban-circle build-icon--failed"></i>
+            <i class="icon icon-question build-icon--unknown"></i>
+            <i class="icon icon-warning-sign build-icon--aborted"></i>
+            <i class="icon icon-refresh build-icon--running"></i>
+        </div>
     </li>
 </ul>
