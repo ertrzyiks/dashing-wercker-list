@@ -1,0 +1,112 @@
+$background: rgb(181, 205, 202);
+
+$default-color: #333333;
+$passed-color: #8fb347;
+$failed-color: rgb(239, 34, 34);
+$unknown-color: #CCCCCC;
+$running-color: #FFC006;
+$aborted-color: #FFBA06;
+
+.widget-wercker-list {
+  background-color: $background;
+
+  .background {
+    width: 100% !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.05;
+  }
+
+  .icon-build {
+    display: none;
+    opacity: 0.3;
+    float: right;
+    font-size: 140%;
+  }
+
+  .icon-build--running,
+  .icon-build--passed,
+  .icon-build--failed,
+  .icon-build--unknown,
+  .icon-build--aborted {
+    @extend .icon-build;
+  }
+
+  .label.status {
+    display: none;
+  }
+
+  .label.result,
+  .label.status {
+    font-size: 50%;
+  }
+
+  li.status-notstarted,
+  li.status-started,
+  li.status-running {
+    .label.result {
+      display: none;
+    }
+
+    .label.status {
+      display: inline;
+    }
+  }
+
+  li {
+    display: block;
+    text-align: left;
+    background-color: $default-color;
+    padding: 0.3em 0.5em;
+    margin: 0.2em 0;
+  }
+
+  li.result-passed {
+    background-color: $passed-color;
+
+    .icon-build--passed {
+      display: inline;
+    }
+  }
+
+  li.result-failed {
+    background-color: $failed-color;
+
+    .icon-build--failed {
+      display: inline;
+    }
+  }
+
+  li.result-aborted {
+    background-color: $aborted-color;
+
+    .icon-build--aborted {
+      display: inline;
+    }
+  }
+
+  li.status-unknown {
+    background-color: $unknown-color;
+
+    .icon-build--unknown {
+      display: inline;
+    }
+  }
+
+  li.status-notstarted {
+    background-color: $unknown-color;
+  }
+
+  li.status-running {
+    background-color: $running-color;
+
+    .icon-build--running {
+      display: inline;
+    }
+  }
+
+  li.status-started {
+    background-color: lighten($running-color, 20%);
+  }
+}

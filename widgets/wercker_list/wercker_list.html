@@ -1,0 +1,18 @@
+<h1 class="title" data-bind="title"></h1>
+
+<img class="background" src="/assets/wercker_logo_shield_black.png">
+
+<ul class="list-nostyle">
+    <li data-foreach-item="items" data-bind-class="item.class_name">
+        <span class="label project" data-bind="item.project.name"></span>
+        <span class="label result" data-bind="item.build.result"></span>
+        <span class="label status" data-bind="item.build.status"></span>
+        <span class="label value" data-bind="item.value"></span>
+
+        <i class="icon icon-check-sign icon-build--passed"></i>
+        <i class="icon icon-ban-circle icon-build--failed"></i>
+        <i class="icon icon-question icon-build--unknown"></i>
+        <i class="icon icon-warning-sign icon-build--aborted"></i>
+        <i class="icon icon-refresh icon-spin icon-build--running"></i>
+    </li>
+</ul>
