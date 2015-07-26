@@ -4,6 +4,8 @@ A [Dashing](http://github.com/shopify/dashing) widget for [Wercker](http://werck
 
 ![](/screenshots/screenshot_list.png?raw=true)
 
+Version with one build on single widget can be found here: https://github.com/ertrzyiks/dashing-wercker
+
 ## Requirements
 
 1. [Dashing](http://github.com/shopify/dashing)
