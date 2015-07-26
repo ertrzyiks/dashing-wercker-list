@@ -54,7 +54,7 @@ To display your dashboard you can use the `dashboards/wercker.erb` as example:
 <div class="gridster">
   <ul>
     <li data-row="1" data-col="1" data-sizex="1" data-sizey="1">
-      <div data-id="wercker-list" data-view="WeckerList" data-title="Wercker status"></div>
+      <div data-id="wercker-list" data-view="WerckerList" data-title="Wercker status"></div>
     </li>
   </ul>
 </div>
